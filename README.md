@@ -16,6 +16,8 @@
 4. MySQL: 8.0.39 for Linux on x86_64 (MySQL Community Server - GPL).
 
 ## Configurações e execução do projeto:
+Primeiro baixe o repositório do projeto no Github.
+
 Inicialmente renomeie:
 ```php
 config/env.php.example
@@ -42,11 +44,10 @@ Essa parte é importante para prosseguir com o projeto. Depois, é só rodar as 
 
 ---
 
-Após baixar o projeto do Github, execute:
+Baixe todas as dependências do projeto.
 ```bash
 composer install
 ```
-Isso irá baixar todas as dependências do projeto.
 
 ---
 
