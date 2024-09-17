@@ -30,7 +30,7 @@ O tempo de expiração de ambos deve ser em timestamp e como inteiro.
 
 É importante que o refresh token tenha um tempo de expiração maior que o token.
 
-Obs.: ÉS interessante manter uma copia do arquivo ".env.php.example".
+Obs.: É interessante manter uma copia do arquivo ".env.php.example".
 
 ---
 
@@ -210,16 +210,6 @@ Obs.: Se o parâmetro "limit" não for especificado, então a busca traz o prime
 7. filterIsbn: Filtra pelo ISBN.
 8. field: Traz somente os campos desejados. Nota: Importante para otimizar buscas.
 
----
-
-**API Book Cover**
-- Criar: POST
-```bash
-curl --location '{{base}}/book-covers?customerID=1' \
---header 'Content-Type: multipart/form-data' \
---header 'Authorization: Bearer {{token}}' \
---form 'book-cover=@"{{file_path}}"'
-```
 
 ---
 
@@ -230,6 +220,17 @@ curl --location '{{base}}/customer-profiles?customerID=1' \
 --header 'Content-Type: multipart/form-data' \
 --header 'Authorization: Bearer {{token}}' \
 --form 'customer-profile=@"{{file_path}}"'
+```
+
+---
+
+**API Book Cover**
+- Criar: POST
+```bash
+curl --location '{{base}}/book-covers?customerID=1' \
+--header 'Content-Type: multipart/form-data' \
+--header 'Authorization: Bearer {{token}}' \
+--form 'book-cover=@"{{file_path}}"'
 ```
 
 ---
