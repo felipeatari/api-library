@@ -9,15 +9,11 @@
 - Optei por utilizar esses nomes porque o teste extra dizia para criar um sistema de uploads de imagens para o cadastro de livros e clientes. Como não foi especificado, deduzi que a imagem do cliente seria sua foto de perfil e a imagem do livro seria a capa do mesmo.
 - Esses nomes também utilizei na regra de negócios. Optei por deixar o código em inglês, mas os campos das tabelas em português.
 
----
-
 ## Pré-requisitos e versões das ferramentas:
 1. Ubuntu: 22.04.5 LTS;
 2. PHP: 8.2.23 (cli) (built: Aug 30 2024 09:21:47) (NTS);
 3. Composer: 2.7.8 2024-08-22 15:28:36;
 4. MySQL: 8.0.39 for Linux on x86_64 (MySQL Community Server - GPL).
-
----
 
 ## Configurações e execução do projeto:
 Após baixar o projeto do Github, renomeie:
@@ -97,8 +93,6 @@ php yii create-user
 ```bash
 php yii list-user
 ```
-
----
 
 ## Executando as APIs:
 **NOTA:**  
