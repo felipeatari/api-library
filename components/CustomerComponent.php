@@ -2,9 +2,9 @@
 
 namespace app\components;
 
-use app\components\BrasilApiComponent as BrasilApi;
 use app\components\ResponseComponent as Response;
 use app\components\TokenComponent as Token;
+use app\services\BrasilApiService as BrasilApi;
 use yii\data\Sort;
 use Yii;
 

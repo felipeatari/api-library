@@ -1,12 +1,12 @@
 <?php
 
-namespace app\components;
+namespace app\services;
 
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
-class BrasilApiComponent
+class BrasilApiService
 {
     private static string $base = 'https://brasilapi.com.br';
 
