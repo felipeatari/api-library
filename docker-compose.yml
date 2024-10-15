@@ -1,9 +1,37 @@
-version: '2'
 services:
   php:
-    image: yiisoftware/yii2-php:7.4-apache
+    container_name: api_library_app
+    image: yiisoftware/yii2-php:8.2-apache
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
       - ./:/app:delegated
     ports:
-      - '8000:80'
+      - 8000:80
+    networks:
+    - rede_api_library
+
+  mysql:
+    image: mysql/mysql-server:8.0
+    container_name: api_library_db
+    restart: always
+    volumes:
+        - db_api_library:/var/lib/mysql
+    environment:
+        - MYSQL_ROOT_HOST=%
+        - MYSQL_ROOT_PASSWORD=yii2
+        - MYSQL_DATABASE=yii2
+        - MYSQL_USER=yii2
+        - MYSQL_PASSWORD=yii2
+    expose:
+    - 3306
+    ports:
+        - 3306:3306
+    networks:
+        - rede_api_library
+
+volumes:
+    db_api_library:
+
+networks:
+    rede_api_library:
+      driver: bridge

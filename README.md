@@ -1,13 +1,9 @@
 **NOTA:**  
-- Este é meu primeiro contato com o Yii2 Framework, então possivelmente posso ter encontrado algumas limitações em relação ao framework.  
-- Porém, já adianto que gostei bastante dessa ferramenta. Como já venho do Laravel e CakePHP, foi mais simples entender como ela funciona. Achei bem versátil e flexível.  
 - Recomendo fortemente utilizar o PHP 8+, pois estou utilizando alguns recursos dessa versão.  
 - Desenvolvi o projeto no Ubuntu como subsistema do Windows 11 via WSL 2. O MySQL rodei em um container Docker e testei as requisições da API via Postman.
 - Deixei o projeto o mais "enxuto" possível. Removi alguns arquivos e pastas e adicionei outros, pois não gosto de me limitar a ferramenta. Todos as novas classes estão na pasta "components". 
 - Como o projeto é simples e utilizei o token JWT, resolvi não salvar o token no banco de dados.
 - No Bucket S3, criei duas pastas dentro do bucket. As pastas foram nomeadas como "customer-profiles" e "book-covers", e o bucket foi nomeado como "library". No arquivo "config/env.php" há os campos para configura-los.
-- Optei por utilizar esses nomes porque o teste extra dizia para criar um sistema de uploads de imagens para o cadastro de livros e clientes. Como não foi especificado, deduzi que a imagem do cliente seria sua foto de perfil e a imagem do livro seria a capa do mesmo.
-- Esses nomes também utilizei na regra de negócios. Optei por deixar o código em inglês, mas os campos das tabelas em português.
 
 ## Pré-requisitos e versões das ferramentas:
 1. Ubuntu: 22.04.5 LTS;
@@ -34,6 +30,16 @@ Obs.: É interessante manter uma copia do arquivo ".env.php.example".
 
 ---
 
+## Docker
+- Uma alternatica é rodar via Docker. Já vem com o container da aplicação e do bando de dados.
+- Se optar pelo container deve-se acessar:
+```bash
+docker exec -it api_library_app bash
+```
+Obs.: Independente de utilizar o docker ou não os passos abaixo serão os mesmos.
+
+---
+
 Credenciais do Banco de Dados:
 ```php
 config/db.php
@@ -53,6 +59,7 @@ Após "installar o projeto", rode o servidor:
 ```bash
 php yii serve
 ```
+Obs.: Se for utilizar docker, esse comando não será necessário.
 
 ---
 
